@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+def laf(minutes : int,gender : char)->float:
+    if gender == "M":
+        if minutes >= 0 and minutes <=100 :
+            return 1,47
+        elif minutes >= 100 and minutes <=280:
+            return 1,70
+        elif minutes >280:
+            return 2,1
+    else:
+        if minutes >= 0 and minutes <=100 :
+            return 1,42
+        elif minutes >= 100 and minutes <=280:
+            return 1,56
+        elif minutes >280:
+            return 1,73
+
+    return 0.0
+
+
+
+
+
+
+=======
 def basalMetabolism(gender:str,age:int,weight:float) -> float:
     res = float(0.0)
     if gender == "F":
@@ -20,3 +45,4 @@ def basalMetabolism(gender:str,age:int,weight:float) -> float:
           res = 8,4 * weight + 819
     
     return res
+>>>>>>> 9c798a2076340ce14e915df749e389940df239c1
