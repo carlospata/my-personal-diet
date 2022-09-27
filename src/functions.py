@@ -20,7 +20,7 @@ def basalMetabolism(gender:str, age:int, weight:float) -> float:
           res = 9,8 * weight + 624
     return res
 
-def laf(minutes : int,gender : char)->float:
+def laf(minutes : int,gender : str)->float:
     if gender == "M":
         if minutes >= 0 and minutes <=100 :
             return 1,47
