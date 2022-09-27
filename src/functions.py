@@ -45,4 +45,11 @@ def bmi( weight : float, height : float)->float:
     value = weight / pow(height,2)
     return value
 
+from typing import Tuple
+def calories_division(calorie_requirement: float) -> Tuple[float,float,float] :
+    carbohydrates = (calorie_requirement * 60) / 100
+    fats = (calorie_requirement * 25) / 100
+    proteins = (calorie_requirement * 15) / 100
+
+    return carbohydrates, fats, proteins
 
