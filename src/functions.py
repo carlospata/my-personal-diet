@@ -38,7 +38,7 @@ def laf(minutes : int,gender : str)->float:
 
     return 0.0
 
-def calorieRequiment( basalMetabolism_ : float,laf_ : float)->float:
+def calorieRequirement( basalMetabolism_ : float,laf_ : float)->float:
     return basalMetabolism_*laf_
 
 def bmi( weight : float, height : float)->float:
@@ -52,4 +52,18 @@ def calories_division(calorie_requirement: float) -> Tuple[float,float,float] :
     proteins = (calorie_requirement * 15) / 100
 
     return carbohydrates, fats, proteins
+
+def getWorkoutTime( bmi_ :float)->int:
+    minutes = int(0)
+    if bmi_ < 18 :
+        minutes = 180
+    elif bmi_ >= 18 and bmi_ <= 25:
+        minutes = 240
+    else:
+        minutes = 300
+
+    return minutes
+
+
+
 
