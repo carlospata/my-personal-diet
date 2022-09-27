@@ -37,3 +37,12 @@ def laf(minutes : int,gender : str)->float:
             return 1,73
 
     return 0.0
+
+def calorieRequiment( basalMetabolism_ : float,laf_ : float)->float:
+    return basalMetabolism_*laf_
+
+def bmi( weight : float, height : float)->float:
+    value = weight / pow(height,2)
+    return value
+
+
