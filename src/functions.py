@@ -1,4 +1,4 @@
-def basal_metabolism(gender:str, age:int, weight:float) -> float:
+def basal_metabolism(gender:str, age:int, weight:int) -> float:
     res = float(0.0)
     if gender == "M":
        if (age <= 29):
@@ -41,8 +41,9 @@ def laf(minutes : int,gender : str)->float:
 def calorie_requirement( basalMetabolism_ : float,laf_ : float)->float:
     return basalMetabolism_*laf_
 
-def bmi( weight : float, height : float)->float:
-    value = weight / pow(height,2)
+def bmi(weight : int, height : int)->float:
+    height_m = height / 100.0
+    value = weight / pow(height_m,2)
     return value
 
 from typing import Tuple
