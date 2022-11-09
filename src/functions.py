@@ -42,7 +42,8 @@ def calorie_requirement( basalMetabolism_ : float,laf_ : float)->float:
     return basalMetabolism_*laf_
 
 def bmi( weight : float, height : float)->float:
-    value = weight / pow(height,2)
+    height_m = height/100.0
+    value = weight / pow(height_m,2)
     return value
 
 from typing import Tuple
