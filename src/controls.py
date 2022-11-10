@@ -2,7 +2,7 @@ import tkinter as tk
 
 def delete(input: tk.Entry) -> None : # pragma: no cover
     if input["fg"] != "tomato": # delete text only if it's the message error
-     return
+        return
     
     input.config(state="normal") # active the button
     input.delete(0, tk.END)
@@ -49,11 +49,9 @@ def go_back(root: tk.Tk, current_page: result_page.ResultPage, previous_page: in
     del current_page 
     previous_page.frame.grid(sticky="NSWE") # restore the previous page
     restore_event(root,previous_page) # restore the event of the previous page
-    return
 
 def restore_event(root: tk.Tk, page: input_page.InputPage) -> None: # pragma: no cover    
     root.unbind("<Return>")
     root.unbind("<BackSpace>")
     root.bind("<Return>", lambda f: page.send_input.invoke())
     page.age_input.focus_set()
-    return

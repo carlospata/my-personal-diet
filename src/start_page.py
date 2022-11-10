@@ -36,3 +36,4 @@ class StartGUI(): # pragma: no cover
         self.enter.grid(row=2, column=0, columnspan=2, sticky="N", pady=(10,0))
         
         parent.bind("<Return>", lambda f: self.enter.invoke()) # bind an event to the parent window
+        

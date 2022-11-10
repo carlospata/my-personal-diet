@@ -6,8 +6,8 @@ class InputPage(): # pragma: no cover
     def __init__(self, parent: tk.Tk, previous_page: previous.StartGUI):       
         if not ctrl.validate(previous_page.name_input) : # verify the input from the previous page
             return
-        else:
-            previous_page.frame.grid_remove() # if, it's ok remove the previous page & create the new
+        
+        previous_page.frame.grid_remove() # if, it's ok remove the previous page & create the new
         
         parent.unbind("<Return>") # unbind event about the previous page
         

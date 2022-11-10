@@ -26,8 +26,8 @@ class ResultPage(): # pragma: no cover
         
         if not valid_input:
             return
-        else:
-            previous_page.frame.grid_remove()
+        
+        previous_page.frame.grid_remove()
 
         parent.unbind("<Return>")
        
@@ -41,10 +41,10 @@ class ResultPage(): # pragma: no cover
         self.frame.grid_rowconfigure(2, weight=0)
         self.frame.grid_rowconfigure(3, weight=1)
 
-        if(previous_page.gender_input.get().islower()):
-         tmp = previous_page.gender_input.get()
-         previous_page.gender_input.delete(0, tk.END)
-         previous_page.gender_input.insert(0, tmp.upper())
+        if previous_page.gender_input.get().islower():
+            tmp = previous_page.gender_input.get()
+            previous_page.gender_input.delete(0, tk.END)
+            previous_page.gender_input.insert(0, tmp.upper())
 
         # elaborate results according to the inputs
         basal_metabolism = func.basal_metabolism(previous_page.gender_input.get(), int(previous_page.age_input.get()), int(previous_page.weight_input.get()))
