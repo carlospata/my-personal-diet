@@ -15,14 +15,16 @@ def validate(input: tk.Entry) -> bool : # pragma: no cover
         input.insert(0, "Required Field!") # error message
         input.config(state= "disabled", disabledforeground="red", disabledbackground="white") # disable the input
         return False
-    elif str(input) == ".input.gender":
+    
+    if str(input) == ".input.gender":
         if(input.get() != "M" and input.get() != "F" and input.get() != "m" and input.get() != "f"):
             input.config(fg="tomato", highlightbackground = "red", highlightcolor = "red")
             input.delete(0, tk.END)
             input.insert(0, "Error, type M or F!")
             input.config(state="disabled", disabledforeground="red", disabledbackground="white")  
             return False
-    elif (input.winfo_parent() != ".start" and (input.get().isalpha() or not input.get().isnumeric() or input.get() == "0")):
+    
+    if (input.winfo_parent() != ".start" and (input.get().isalpha() or not input.get().isnumeric() or input.get() == "0")):
         if str(input) == ".input.workout_time" and input.get() == "0": # workout time can be 0
             return True
 
@@ -31,7 +33,8 @@ def validate(input: tk.Entry) -> bool : # pragma: no cover
         input.insert(0, "Error, insert an integer > 0!")
         input.config(state= "disabled", disabledforeground="red", disabledbackground="white")  
         return False 
-    elif input["fg"] == "tomato": # if it's not valid
+    
+    if input["fg"] == "tomato": # if it's not valid
         return False
     
     return True
