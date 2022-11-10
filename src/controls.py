@@ -23,6 +23,8 @@ def validate(input: tk.Entry) -> bool : # pragma: no cover
             input.insert(0, "Error, type M or F!")
             input.config(state="disabled", disabledforeground="red", disabledbackground="white")  
             return False
+        
+        return True
     
     if (input.winfo_parent() != ".start" and (input.get().isalpha() or not input.get().isnumeric() or input.get() == "0")):
         if str(input) == ".input.workout_time" and input.get() == "0": # workout time can be 0
