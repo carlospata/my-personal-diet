@@ -68,6 +68,4 @@ def getWorkoutTime(bmi_: float) -> int:
         return 240
     
     return 300
-
-
-
+    
