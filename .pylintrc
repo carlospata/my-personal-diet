@@ -314,7 +314,7 @@ overgeneral-exceptions=BaseException,
 [FORMAT]
 
 # Expected format of line ending, e.g. empty (any line ending), LF or CRLF.
-expected-line-ending-format=LF
+expected-line-ending-format=
 
 # Regexp for a line that is allowed to be longer than the limit.
 ignore-long-lines=^\s*(# )?<?https?://\S+>?$
@@ -327,7 +327,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=1000
+max-line-length=1000000
 
 # Maximum number of lines in a module.
 max-module-lines=1000
